@@ -27,11 +27,7 @@ pub trait IntoEither: Sized {
     /// assert_eq!(x.into_either(false), Right(x));
     /// ```
     fn into_either(self, into_left: bool) -> Either<Self, Self> {
-        if into_left {
-            Left(self)
-        } else {
-            Right(self)
-        }
+        if into_left { Left(self) } else { Right(self) }
     }
 
     /// Converts `self` into a [`Left`] variant of [`Either<Self, Self>`](Either)
