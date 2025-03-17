@@ -31,6 +31,10 @@ How to use with cargo::
 Recent Changes
 --------------
 
+- 1.16.0
+
+  - **MSRV**: ``either`` now requires Rust 1.85 or later.
+
 - 1.15.0
 
   - Fix ``serde`` support when building without ``std``, by @klkvr (#119)
