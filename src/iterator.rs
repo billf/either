@@ -2,7 +2,7 @@ use super::{for_both, Either, Left, Right};
 use core::iter;
 
 macro_rules! wrap_either {
-    ($value:expr => $( $tail:tt )*) => {
+    ($value:expr_2021 => $( $tail:tt )*) => {
         match $value {
             Left(inner) => inner.map(Left) $($tail)*,
             Right(inner) => inner.map(Right) $($tail)*,

@@ -79,7 +79,7 @@ pub enum Either<L, R> {
 /// ```
 #[macro_export]
 macro_rules! for_both {
-    ($value:expr, $pattern:pat => $result:expr) => {
+    ($value:expr_2021, $pattern:pat => $result:expr_2021) => {
         match $value {
             $crate::Either::Left($pattern) => $result,
             $crate::Either::Right($pattern) => $result,
@@ -111,7 +111,7 @@ macro_rules! for_both {
 /// ```
 #[macro_export]
 macro_rules! try_left {
-    ($expr:expr) => {
+    ($expr:expr_2021) => {
         match $expr {
             $crate::Left(val) => val,
             $crate::Right(err) => return $crate::Right(::core::convert::From::from(err)),
@@ -122,7 +122,7 @@ macro_rules! try_left {
 /// Dual to [`try_left!`], see its documentation for more information.
 #[macro_export]
 macro_rules! try_right {
-    ($expr:expr) => {
+    ($expr:expr_2021) => {
         match $expr {
             $crate::Left(err) => return $crate::Left(::core::convert::From::from(err)),
             $crate::Right(val) => val,
@@ -131,7 +131,7 @@ macro_rules! try_right {
 }
 
 macro_rules! map_either {
-    ($value:expr, $pattern:pat => $result:expr) => {
+    ($value:expr_2021, $pattern:pat => $result:expr_2021) => {
         match $value {
             Left($pattern) => Left($result),
             Right($pattern) => Right($result),
