@@ -1,3 +1,8 @@
+- 1.18.0 - 2026-08-20
+  - Add trait impls akin to `Itertools::partition_map`, by @cuviper (#144)
+    - `Extend<Either<L, R>> for (A, B)`
+    - `FromIterator<Either<L, R>> for (A, B)`
+
 - 1.17.0 - 2026-07-24
   - Add implementations for all `std::fmt` traits, by @msrd0 (#141)
 
